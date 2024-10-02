@@ -51,15 +51,32 @@
     <div>As I reduce the size of the browser window, the row with the dessert names breaks first. This is because the dessert names are placed in columns with the class <code>col-md</code>, which are wider than the columns with the class <code>col-sm-2</code> used for the letters. The <code>col-md</code> columns are responsive to a larger breakpoint, while the <code>col-sm-2</code> columns are designed for smaller devices, allowing them to remain on one line longer as the viewport size decreases.</div>
   </div>
   <div class="container">
-    <img src="ube-flan.jpg" style="width: 400px; height: 400px;" class="img-fluid" alt="Image of ube-flan">
-    <img src="pistachio-baklava.jpg" style="width: 400px; height: 400px;" class="img-fluid" alt="Image of pistachio-baklava">
-    <img src="pavlova-with-berries.jpg" style="width: 400px; height: 400px;" class="img-fluid" alt="Image of pavlova-with-berries">
-  </div>
-  <div class="container">
-    <img src="ube-flan.jpg" style="width: 200px; height: 200px;" class="img-thumbnail" alt="Image of ube-flan">
-    <img src="pistachio-baklava.jpg" style="width: 200px; height: 200px;" class="img-thumbnail" alt="Image of pistachio-baklava">
-    <img src="pavlova-with-berries.jpg" style="width: 200px; height: 200px;" class="img-thumbnail" alt="Image of pavlova-with-berries">
-  </div>
+    <div class="row">
+        <div class="col-md">
+            <img src="ube-flan.jpg" alt="Ube Flan" class="img-fluid" style = "width: 400px; height: 400px;">
+        </div>
+        <div class="col-md">
+            <img src="pistachio-baklava.jpg" alt="Pistachio Baklava" class="img-fluid " style = "width: 400px; height: 400px;">
+        </div>
+        <div class="col-md">
+            <img src="pavlova-with-berries.jpg" alt="Pavlova With Berries" class="img-fluid" style = "width: 400px; height: 400px;">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <img src="ube-flan.jpg" alt="Ube Flan Thumbnail" class="img-thumbnail" style = "width: 100px; height: 100px;">
+        </div>
+        <div class="col-md">
+            <img src="pistachio-baklava.jpg" alt="Pistachio Baklava Thumbnail" class="img-thumbnail" style = "width: 100px; height: 100px;">
+        </div>
+        <div class="col-md">
+            <img src="pavlova-with-berries.jpg" alt="Pavlova With Berries Thumbnail" class="img-thumbnail" style = "width: 100px; height: 100px;">
+        </div>
+    </div>
+</div>
   <div class="container mt-4">    
     <caption>Desserts, Cities, and Insects by Letter</caption>
     <table class="table table-bordered table-striped table-hover table-sm">      
@@ -127,40 +144,47 @@
         </div>      
     </div>
   </div>
-  <div class="dropdown mt-2">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        Choose a Page
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="basic.html">Basic Page</a></li>
-        <li><a class="dropdown-item" href="advanced.html">Advanced Page</a></li>
-    </ul>
-  </div>
-  <form>
-    <div class="form-group">
-        <label for="emailInput">Email address</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="container mt-4">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+           Choose a Page
+        </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="basic.html">Basic Page</a>
+            <a class="dropdown-item" href="Advanced.html">Advanced Page</a>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="dessertInput">Dessert</label>
-        <input type="text" class="form-control" id="dessertInput" placeholder="Enter your dessert">
-    </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="newsletterCheck">
-        <label class="form-check-label" for="newsletterCheck">Sign up for newsletter?</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  <div class="container mt-2"></div>
+</div>
+
+<div class="container mt-4">
+    <form>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="dessert">Dessert</label>
+            <input type="text" class="form-control" id="dessert" placeholder="Enter your dessert">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="newsletter">
+            <label class="form-check-label" for="newsletter">Sign up for newsletter?</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>
+  
+  <div class="container mt-2">
     <div class="row">
         <!-- First Card -->
         <div class="col-sm-4">
             <div class="card">
-                <img src="ube-flan.jpg" class="card-img-top" alt="Ube Clan">
+                <img src="ube-flan.jpg" class="card-img-top" alt="Ube Flan">
                 <div class="card-body">
-                    <h5 class="card-title">Ube Clan</h5>
-                    <p class="card-text">Ube cake is a traditional Filipino chiffon cake or sponge cake made with ube halaya.</p>
+                    <h5 class="card-title">Ube Flan</h5>
+                    <p class="card-text">Ube flan cake is a traditional Filipino chiffon cake or sponge cake made with ube halaya.</p>
                     <a href="https://en.wikipedia.org/wiki/Ube_cake" class="btn btn-primary" target="_blank">Learn more</a>
                 </div>
             </div>
@@ -191,5 +215,6 @@
         </div>
     </div>
   </div>
+
 </body>
 </html>
